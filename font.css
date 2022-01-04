@@ -1,0 +1,17 @@
+@font-face {
+    font-family: persian;
+    src: url(font1.ttf);
+  }
+  
+  div {
+    font-family: persian;
+  }
+
+  @font-face {
+    font-family: iransans;
+    src: url(iran.ttf);
+  }
+  
+  div {
+    font-family: iransans;
+  }
