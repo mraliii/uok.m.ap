@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>UOK Map</title>
+    <link rel="icon" href="bank.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <meta name="viewport"
+        content="width = device - width , initial-scale = 1.0,maximum-scale = 1 , user-scalable =no, minimum-scale =1, height = device -height,target-densitydpi= device-dpi">
+    <link rel="stylesheet" href="styler.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="gradiant.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="http://cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.css" />
+</head>
+
+<body onload="myFunction()">
+    <span id="loader"></span>
+
+    <main style="display: none;" id="main__div" class="animate-bottom">
+        <header class="header__top">
+            <a href="index.html">
+                <img class="header__image" src="https://map-uok.s3.ir-thr-at1.arvanstorage.com/uok.png">
+
+            </a>
+
+        </header>
+        <section class="section_icon">
+            <span class="icon_style">
+
+                <i data-page="page1" class=" fas fa-school fa-lg"></i>
+            </span>
+            <span class="icon_style">
+                <i data-page="page2" class="fas fa-bed fa-lg"></i>
+
+            </span>
+
+            <span class="icon_style">
+                <i data-page="page3" class="fas fa-chalkboard-teacher fa-lg"></i>
+
+            </span>
+            <span class="icon_style">
+                <i data-page="page4" class="fas fa-utensils fa-lg"></i>
+
+            </span>
+            <span class="icon_style">
+                <i data-page="page5" class="fas fa-users-cog fa-lg"></i>
+
+            </span>
+            <span class="icon_style">
+                <i data-page="page6" class="fas fa-running fa-lg"></i>
+            </span>
+        </section>
+        <section class="top_section">
+            <section class="section_flex">
+                <button class="btn btn-primary" data-page="page1">نقشه هوایی</button>
+            </section>
+            <section class="section_flex">
+                <button class="btn btn-primary" data-page="page2">ساختمان مرکزی</button>
+                <button class="btn btn-primary" data-page="page3">دانشکده علوم انسانی</button>
+                <button class="btn btn-primary" data-page="page4">دانشکده ادبیات </button>
+            </section>
+            <section class="section_flex">
+                <button class="btn btn-primary " data-page="page5">دانشکده علوم پایه</button>
+                <button class="btn btn-primary" data-page="page6">هنر و معماری</button>
+                <button class="btn btn-primary " data-page="page7">دانشکده مهندسی</button>
+            </section>
+            <section class="section_flex">
+                <button class="btn btn-primary " data-page="page8">دانشکده کشاورزی</button>
+                <button class="btn btn-primary" data-page="page9">منابع طبیعی</button>
+                <button class="btn btn-primary " data-page="page10">مجتمع دیاری گولان</button>
+            </section>
+            <section class="section_flex">
+                <button class="btn btn-primary " data-page="page11">آموزش کل</button>
+                <button class="btn btn-primary" data-page="page12">بانک تجارت</button>
+                <button class="btn btn-primary " data-page="page13">تالار مولوی</button>
+            </section>
+            <section class="section_flex">
+                <button class="btn btn-primary " data-page="page14">سلف مرکزی</button>
+                <button class="btn btn-primary" data-page="page15">کردستان شناسی</button>
+                <button class="btn btn-primary " data-page="page16">مهمانسرای دانشگاه</button>
+            </section>
+            <section class="section_flex">
+                <button class="btn btn-primary " data-page="page17">گزینش-درمانگاه</button>
+                <button class="btn btn-primary" data-page="page18">مجموعه رفاهی</button>
+                <button class="btn btn-primary " data-page="page19">مجموعه ورزشی</button>
+            </section>
+            <section class="section_flex">
+                <button class="btn btn-primary " data-page="page20">کتابخانه</button>
+                <button class="btn btn-primary" data-page="page21">مسجد</button>
+                <button class="btn btn-primary " data-page="page22">فرهنگی دانشجویی</button>
+            </section>
+            <section class="section_flex">
+                <button class="btn btn-primary " data-page="page23">سلف سرویس</button>
+                <button class="btn btn-primary" data-page="page24">خوابگاه دختران</button>
+                <button class="btn btn-primary " data-page="page25">خوابگاه پسران</button>
+            </section>
+            <section class="section_flex">
+                <button class="btn btn-primary " data-page="page26">Google map</button>
+            </section>
+        </section>
+
+        <div id="page1">
+            <h1 class="div_h1" style="font-family: iransans;">نقشه هوایی</h1>
+            <iframe class="map__frame"
+                src="https://conf.uok.ac.ir/_JiroConference/Files/Conference/16/Common/ContentPage/Univ.jpg" width="640"
+                height="480"></iframe>
+        </div>
+        <div id="page2">
+            <h1 class="div_h1">Residences</h1>
+            <iframe class="map__frame"
+                src="https://www.google.com/maps/d/embed?mid=1QqOUFBVyOQCLBTLkie4svM_6gAFby2TQ&hl=en" width="640"
+                height="480"></iframe>
+        </div>
+        <div id="page3">
+            <h1 class="div_h1">Lecture Halls</h1>
+            <iframe class="map__frame"
+                src="https://www.google.com/maps/d/u/0/embed?mid=14AKRY1Xm6hEq2bQrZaKbJLRIUNXccaKs" width="640"
+                height="480"></iframe>
+        </div>
+        <div id="page4">
+            <h1 class="div_h1">Eating Places</h1>
+            <iframe class="map__frame"
+                src="https://www.google.com/maps/d/u/0/embed?mid=1RA-UsNXbuuqfuSnLu8Iq1uxjmBQZbHIc" width="640"
+                height="480"></iframe>
+        </div>
+        <div id="page5">
+            <h1 class="div_h1">Support-Services</h1>
+            <iframe class="map__frame"
+                src="https://www.google.com/maps/d/u/0/embed?mid=1wl3f6w7ho7Iia9nutS0aysC1_6PckReM" width="640"
+                height="480"></iframe>
+        </div>
+
+        <div id="page6">
+            <h1 class="div_h1">Sports Area</h1>
+            <iframe class="map__frame"
+                src="https://www.google.com/maps/d/u/0/embed?mid=1NKgC1banyAEpfpXRMuW9nSq9oh2Ar52k" width="640"
+                height="480"></iframe>
+        </div>
+        </br></br></br></br></br>
+        <footer>
+            <p class="footer_me">
+
+                &copy; Developer : Ali Bahrami | Avin Abbasi
+                </a>
+            </p>
+        </footer>
+        </br> </br> </br> </br> </br>
+
+    </main>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
